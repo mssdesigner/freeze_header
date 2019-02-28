@@ -7,173 +7,53 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="controller.js"></script>
 </head>
 <body>
 
 <div class="container">
-  <table class="table" id="t">
-    <thead>
-      <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
-        <th>Teste</th>
-        <th>Teste</th>
-        <th>Teste</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-        <td>john@example.com</td>
-        <td>john@example.com</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-        <td>john@example.com</td>
-        <td>john@example.com</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-        <td>john@example.com</td>
-        <td>john@example.com</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-        <td>john@example.com</td>
-        <td>john@example.com</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-        <td>john@example.com</td>
-        <td>john@example.com</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-        <td>john@example.com</td>
-        <td>john@example.com</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-        <td>john@example.com</td>
-        <td>john@example.com</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-        <td>john@example.com</td>
-        <td>john@example.com</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-        <td>john@example.com</td>
-        <td>john@example.com</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-        <td>john@example.com</td>
-        <td>john@example.com</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-        <td>john@example.com</td>
-        <td>john@example.com</td>
-        <td>john@example.com</td>
-      </tr>
-    <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-        <td>john@example.com</td>
-        <td>john@example.com</td>
-        <td>john@example.com</td>
-    </tr>
-    <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-        <td>john@example.com</td>
-        <td>john@example.com</td>
-        <td>john@example.com</td>
-    </tr>
-      
-    </tbody>
-  </table>
+  <div id="teste"></div>
 </div>
 <script>
 $(function() {
-    freeze("#t");
+  
+    var model = [
+      {nome: "Marcelo", idade: 35, sexo: "Masculino", on: true},
+      {nome: "Vanessa", idade: 32, sexo: "Feminino", on: true},
+      {nome: "Thomas", idade: 1, sexo: "Masculino", on: false},
+      {nome: "Thomas", idade: 1, sexo: "Masculino", on: false},
+      {nome: "Thomas", idade: 1, sexo: "Masculino", on: false},
+      {nome: "Thomas", idade: 1, sexo: "Masculino", on: false},
+      {nome: "Thomas", idade: 1, sexo: "Masculino", on: false},
+      {nome: "Thomas", idade: 1, sexo: "Masculino", on: false},
+      {nome: "Thomas", idade: 1, sexo: "Masculino", on: false},
+      {nome: "Thomas", idade: 1, sexo: "Masculino", on: false},
+      {nome: "Thomas", idade: 1, sexo: "Masculino", on: false},
+      {nome: "Thomas", idade: 1, sexo: "Masculino", on: false},
+      {nome: "Thomas", idade: 1, sexo: "Masculino", on: false},
+      {nome: "Thomas", idade: 1, sexo: "Masculino", on: false},
+      {nome: "Thomas", idade: 1, sexo: "Masculino", on: false},
+      {nome: "Thomas", idade: 1, sexo: "Masculino", on: false},
+      {nome: "Thomas", idade: 1, sexo: "Masculino", on: false},
+      {nome: "Thomas", idade: 1, sexo: "Masculino", on: false},
+      {nome: "Thomas", idade: 1, sexo: "Masculino", on: false},
+      {nome: "Thomas", idade: 1, sexo: "Masculino", on: false},
+      {nome: "Thomas", idade: 1, sexo: "Masculino", on: false},
+      {nome: "Thomas", idade: 1, sexo: "Masculino", on: false},
+      {nome: "Thomas", idade: 1, sexo: "Masculino", on: false},
+      {nome: "Thomas", idade: 1, sexo: "Masculino", on: false},
+      {nome: "Thomas", idade: 1, sexo: "Masculino", on: false},
+      {nome: "Thomas", idade: 1, sexo: "Masculino", on: false}
+    ];
+
+    grid = new GridView($('#teste'), model);
+    grid.createHeaderTable();
+    grid.createBodyTable();
+
+    freeze("#grid");
+
 });
-
- function freeze(id){
-    var table = $(id),
-    thead = table.find('thead'),
-    
-    fixed_thead,
-    fixed_table = $('<table />', {
-      'cellpadding': 5,
-      'cellspacing': 0,
-      'id': 'fixed_table_header'
-    });
-      
-    if($('#fixed_table_wrapper').length === 0){
-        thead.find('th').each(function() {
-        $(this).css('width', $(this).width());
-        });
-    
-        fixed_thead = thead.clone();
-
-        var fixed_table_wrapper = $('<div />', {
-            'id': 'fixed_table_wrapper',
-            'height': 400,
-            'css': {
-                'overflow': 'auto'
-            }
-        });
-
-        table.before(fixed_table);
-        fixed_table.append(fixed_thead);
-        $("#fixed_table_header").addClass("table");
-
-        thead.css('visibility', 'collapse');
-        $("#fixed_table_header").css('margin-bottom', '0px');
-        table.wrap(fixed_table_wrapper);
-    }
-    // align the new table header with the original table
-    //fixed_table.css('left', (fixed_table.offset().left - table.offset().left) * -1);
- }   
-
+ 
 </script>
 </body>
 </html>
