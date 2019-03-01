@@ -13,17 +13,18 @@ function GridView(component, model){
     }
 
     this.createBodyTable = function(){
-        $('#grid thead').after("<tbody><tr></tr></tbody>");
+        console.time();
+        $('#grid thead').after("<tbody></tbody>");
         var insertLine = $("#grid tbody");
         this.ViewModel.forEach(function (e, i){   
             var body = Object.values(e);
-            insertLine.append("<tr></tr>")
+            insertLine.append("<tr></tr>");
             body.forEach(function (e){
-                $("#grid tbody tr").append("<td>" + e + "</td>")
+                $("#grid tbody tr:last-child").append("<td>" + e + "</td>")
             });
         });
+        console.timeEnd();
     }
-
 }
 
 function freeze(id){
